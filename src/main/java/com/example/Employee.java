@@ -2,20 +2,20 @@ package com.example;
 
 public class Employee {
 
-	private String id;
+	private long id;
 	private double salary;
 	private boolean paid;
 
-	public Employee(String id, double salary) {
+	public Employee(long id, double salary) {
 		this.id = id;
 		this.salary = salary;
 	}
 
-	public String getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
