@@ -8,14 +8,14 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class EmployeeTest {
 
     @Test
-    void shouldCreateEmployee() {
+    public void shouldCreateEmployee() {
         Employee e = new Employee(7, 30000);
 
         assertEquals(7, e.getId());
     }
 
     @Test
-    void shouldPayEmployee() {
+    public void shouldPayEmployee() {
         Employee e = new Employee(7, 30000);
 
         e.setPaid(true);
@@ -24,7 +24,7 @@ public class EmployeeTest {
     }
 
     @Test
-    void shouldRaiseSalary() {
+    public void shouldRaiseSalary() {
         Employee e = new Employee(7, 30000);
 
         e.setSalary(40000);
@@ -33,7 +33,7 @@ public class EmployeeTest {
     }
 
     @Test
-    void shouldSetNewId() {
+    public void shouldSetNewId() {
         Employee e = new Employee(7, 30000);
 
         e.setId(8);
@@ -42,7 +42,7 @@ public class EmployeeTest {
     }
 
     @Test
-    void toStringTest() {
+    public void toStringTest() {
         Employee e = new Employee(7, 30000);
 
         assertEquals("Employee [id=7, salary=30000.0]", e.toString());

@@ -1,11 +1,8 @@
 package com.example;
-
-import java.util.List;
 import java.util.Map;
 
 public interface EmployeeRepository {
 
-
-	Map<Long, Employee> getRepository();
+	Map<Long, Employee> getMap();
 	Employee save(Employee e);
 }

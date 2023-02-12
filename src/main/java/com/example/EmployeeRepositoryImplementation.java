@@ -15,7 +15,7 @@ public class EmployeeRepositoryImplementation implements EmployeeRepository {
     }
 
     @Override
-    public Map<Long, Employee> getRepository() {
+    public Map<Long, Employee> getMap() {
         return repository;
     }
 
