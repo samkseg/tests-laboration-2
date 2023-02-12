@@ -1,8 +1,8 @@
 package com.example;
-import java.util.Map;
+import java.util.HashMap;
 
 public interface EmployeeRepository {
 
-	Map<Long, Employee> getMap();
+	HashMap<Long, Employee> getMap();
 	Employee save(Employee e);
 }

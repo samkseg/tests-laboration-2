@@ -14,9 +14,8 @@ public class EmployeeManager {
 	}
 
 	public int payEmployees() {
-		List<Employee> employees = employeeRepository.getMap().values().stream().toList();
 		int payments = 0;
-		for (Employee employee : employees) {
+		for (Employee employee : employeeRepository.getMap().values()) {
 			try {
 				bankService.pay(employee.getId(), employee.getSalary());
 				employee.setPaid(true);
@@ -29,7 +28,7 @@ public class EmployeeManager {
 	}
 
 	public void resetPaidEmployees() {
-		for (Employee employee : employeeRepository.getMap().values().stream().toList()){
+		for (Employee employee : employeeRepository.getMap().values()){
 			employee.setPaid(false);
 		}
 	}

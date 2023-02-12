@@ -2,7 +2,6 @@ package com.example;
 
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class EmployeeRepositoryImplementation implements EmployeeRepository {
 
@@ -15,7 +14,7 @@ public class EmployeeRepositoryImplementation implements EmployeeRepository {
     }
 
     @Override
-    public Map<Long, Employee> getMap() {
+    public HashMap<Long, Employee> getMap() {
         return repository;
     }
 

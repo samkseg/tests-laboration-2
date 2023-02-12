@@ -51,7 +51,7 @@ public class EmployeeManagerTest {
 
     @Test
     public void shouldReturnNotPaidEmployees() {
-        for (Employee employee : employeeRepository.getMap().values().stream().toList()) {
+        for (Employee employee : employeeRepository.getMap().values()) {
             employee.setPaid(true);
         }
         employeeRepository.getMap().get(3L).setPaid(false);
