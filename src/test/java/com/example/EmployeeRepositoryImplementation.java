@@ -20,11 +20,6 @@ public class EmployeeRepositoryImplementation implements EmployeeRepository {
     }
 
     @Override
-    public List<Employee> findAll() {
-        return repository.values().stream().toList();
-    }
-
-    @Override
     public Employee save(Employee e) {
         repository.put(e.getId(), e);
         return repository.get(e.getId());

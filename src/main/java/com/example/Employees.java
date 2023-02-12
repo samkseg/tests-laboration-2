@@ -13,7 +13,7 @@ public class Employees {
 	}
 
 	public int payEmployees() {
-		List<Employee> employees = employeeRepository.findAll();
+		List<Employee> employees = employeeRepository.getRepository().values().stream().toList();
 		int payments = 0;
 		for (Employee employee : employees) {
 			try {
