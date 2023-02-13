@@ -1,6 +1,8 @@
-package com.example;
+package com.example.service.spy;
 
-public class BankServiceSpy implements BankService{
+import com.example.service.BankService;
+
+public class BankServiceSpy implements BankService {
     private int payments;
     @Override
     public void pay(long id, double amount) {
