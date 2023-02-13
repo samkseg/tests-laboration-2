@@ -1,4 +1,6 @@
-package com.example;
+package com.example.repository;
+import com.example.model.Employee;
+
 import java.util.HashMap;
 import java.util.List;
 
