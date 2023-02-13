@@ -56,7 +56,7 @@ public class EmployeeManagerTest {
         }
         employeeRepository.getMap().get(3L).setPaid(false);
 
-        assertEquals(1, employeeManager.getNotPaidEmployees().size());
+        assertEquals(Arrays.asList(employeeRepository.getMap().get(3L)), employeeManager.getNotPaidEmployees());
     }
 
     @Test
