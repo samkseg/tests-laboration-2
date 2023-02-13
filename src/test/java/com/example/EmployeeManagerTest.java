@@ -51,7 +51,7 @@ public class EmployeeManagerTest {
 
     @Test
     public void shouldReturnNotPaidEmployees() {
-        for (Employee employee : employeeRepository.getMap().values()) {
+        for (Employee employee : employeeRepository.findAll()) {
             employee.setPaid(true);
         }
         employeeRepository.getMap().get(3L).setPaid(false);
@@ -65,11 +65,11 @@ public class EmployeeManagerTest {
         employeeManager.resetPaidEmployees();
 
         int count = 0;
-        for (Employee employee : employeeRepository.getMap().values()) {
+        for (Employee employee : employeeRepository.findAll()) {
             if (!employee.isPaid()) {
                 count++;
             }
         }
-        assertEquals(employeeRepository.getMap().values().size(), count);
+        assertEquals(employeeRepository.findAll().size(), count);
     }
 }

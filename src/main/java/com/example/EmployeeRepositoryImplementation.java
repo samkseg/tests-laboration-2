@@ -14,6 +14,11 @@ public class EmployeeRepositoryImplementation implements EmployeeRepository {
     }
 
     @Override
+    public List<Employee> findAll() {
+        return repository.values().stream().toList();
+    }
+
+    @Override
     public HashMap<Long, Employee> getMap() {
         return repository;
     }

@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class BankServiceTest {
 
     private BankService bankService = new BankServiceSpy();
-    
+
     @Test
     public void shouldIncreaseCountedPayments() {
         bankService.pay(1,10000);

@@ -28,7 +28,14 @@ public class EmployeeRepositoryTest {
         }
         assertEquals(employeeMap, employeeRepository.getMap());
     }
+
     @Order(2)
+    @Test
+    public void shouldReturnListOfEmployees(){
+        assertEquals(mockingRepository, employeeRepository.findAll());
+    }
+
+    @Order(3)
     @Test
     public void shouldSaveNewEmployee() {
         Employee employee = new Employee(6, 10000);
@@ -36,7 +43,7 @@ public class EmployeeRepositoryTest {
 
         assertEquals(6, employeeRepository.getMap().size());
     }
-    @Order(3)
+    @Order(4)
     @Test
     public void shouldUpdateExistingEmployee() {
         Employee employee = new Employee(1, 20000);
